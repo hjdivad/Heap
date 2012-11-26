@@ -4,7 +4,13 @@ describe 'Heap.User', ->
 
   beforeEach ->
     Heap.store = Heap.Store.create
-      adapter:  DS.FixtureAdapter.create()
+      adapter:  DS.FixtureAdapter.create(
+        simulateRemoteResponse: false
+      )
+    # defaultStore is set when the first DS.Store is created.  store.js.coffee
+    # has already created the default store (using a RESTAdapter), so this will
+    # be used in e.g. Heap.User.find if we don't overwrite it here.
+    DS.set 'defaultStore', Heap.store
     Ember.run.begin()
 
   afterEach ->
