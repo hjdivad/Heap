@@ -1,6 +1,6 @@
 GIT
-  remote: /Users/jnh/Dev/github/ember-rails
-  revision: 977a62a2a5d1efe5496b2f7ce1fe86c59e1505f2
+  remote: git://github.com/emberjs/ember-rails.git
+  revision: bc359f9625d5961d9cd809f8a0e916d1a25f5b56
   specs:
     ember-rails (0.8.0)
       active_model_serializers
