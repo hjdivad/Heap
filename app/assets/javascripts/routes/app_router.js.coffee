@@ -13,12 +13,12 @@ Heap.Router = Em.Router.extend
       deserialize: (router,context)->
         Heap.User.withNickname(context.nickname)
 
-      serialize: (router,context)->
-        {nickname: context.get('nickname')}
+      # serialize: (router,context)->
+        # {nickname: context.get('nickname')}
 
       connectOutlets: (router, context)->
         console.log "Outlet context: ", Em.inspect(context)
-        router.get('applicationController').connectOutlet('sidebar', 'heaplogSidebar', context.default_heaplog)
+        # router.get('applicationController').connectOutlet('sidebar', 'heaplogSidebar', context.default_heaplog)
         # router.get('applicationController').connectOutlet('heaplogDisplay', 'heaplog', heaplog)
 
     heaplog: Em.Route.extend
